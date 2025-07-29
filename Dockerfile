@@ -6,6 +6,5 @@ RUN apt update && \
 
 COPY iptables-setup.sh /iptables-setup.sh
 RUN chmod +x /iptables-setup.sh
-CMD ["/bin/bash", "/iptables-setup.sh"]
 
-CMD ["bash"]
+CMD ["/bin/bash", "-c", "/iptables-setup.sh && bash"]
